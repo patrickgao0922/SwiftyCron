@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import SwiftyCron
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let cronString = "39 11 02 08 *"
+        let swiftyCron = SwiftyCron(cronString:cronString)
+        
+        print(swiftyCron?.day)
     }
 
     override func didReceiveMemoryWarning() {
