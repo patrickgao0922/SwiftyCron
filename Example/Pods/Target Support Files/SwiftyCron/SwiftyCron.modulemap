@@ -1,0 +1,6 @@
+framework module SwiftyCron {
+  umbrella header "SwiftyCron-umbrella.h"
+
+  export *
+  module * { export * }
+}

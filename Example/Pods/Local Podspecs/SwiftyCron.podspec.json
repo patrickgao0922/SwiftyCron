@@ -1,0 +1,22 @@
+{
+  "name": "SwiftyCron",
+  "version": "0.1.0",
+  "summary": "A short description of SwiftyCron.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/patrickgao0922@gmail.com/SwiftyCron",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "patrickgao0922@gmail.com": "patrickgao0922@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/patrickgao0922@gmail.com/SwiftyCron.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SwiftyCron/Classes/**/*"
+}
