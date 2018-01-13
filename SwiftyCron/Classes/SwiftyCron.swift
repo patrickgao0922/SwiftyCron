@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CronParse:NSObject {
+public class SwiftyCron {
     
     /// # Decomposing cron expression error
     /// [node-cron](https://github.com/kelektiv/node-cron)
@@ -78,12 +78,12 @@ class CronParse:NSObject {
     ///
     /// - Parameter cronString: Cron expression String
     init(cronString:String) {
-        super.init()
         try? decompose(cronString: cronString)
-        
-        
     }
     
+    init(minute:Int? = nil, hour:Int? = nil, day:Int? = nil, month:Month? = nil, weekday:Weekday? = nil, year:Int? = nil) {
+        validate(minute: minute, hour: hour, day: day, month: month, weekday: weekday, year: year)
+    }
     
     /// Decompose cronString to each cron components and assign them into each properties
     ///
@@ -171,7 +171,50 @@ class CronParse:NSObject {
                 throw DecomposingError.invalidYear
             }
         }
+    }
+    
+    fileprivate func validate(minute:Int? = nil, hour:Int? = nil, day:Int? = nil, month:Month? = nil, weekday:Weekday? = nil, year:Int? = nil) throws {
+        //        Validate minute
+        if minute != nil {
+            guard (minute! >= 0 && minute! <= 59) else {
+                throw DecomposingError.invalidMinute
+            }
+        }
         
+        //        Validate hour
+        if hour != nil {
+            guard (hour! >= 0 && hour! <= 23)else {
+                throw DecomposingError.invalidHour
+            }
+        }
+        
+        //        Validate day
+        if day != nil {
+            guard (day! >= 1 && day! <= 31) else {
+                throw DecomposingError.invalidDay
+            }
+        }
+        
+        //        Validate month
+        if month != nil {
+            guard (month! >= 1 && day! <= 12) else {
+                throw DecomposingError.invalidMonth
+            }
+        }
+        
+        //        Validate weekday
+        if weekday != nil {
+            guard (weekday! >= 1 && weekday! <= 7) else {
+                throw DecomposingError.invalidWeekday
+            }
+        }
+        
+        //        Validate year
+        if year != nil {
+            guard (year! >= 1900 && year! <= 3000) else {
+                throw DecomposingError.invalidYear
+            }
+        }
     }
 }
 
