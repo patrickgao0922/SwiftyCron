@@ -40,7 +40,7 @@ public class SwiftyCron {
     }
     
     public enum Weekday:Int {
-        var fullString:String {
+        public var fullString:String {
             switch self {
             case .monday: return "Monday"
             case .tuesday:return "Tuesday"
@@ -52,7 +52,7 @@ public class SwiftyCron {
             }
         }
         
-        var inittialString:String {
+        public var inittialString:Substring {
             return self.fullString.prefix(3)
         }
         
@@ -66,6 +66,28 @@ public class SwiftyCron {
     }
     
     public enum Month:Int {
+        
+        public var fullString:String {
+            switch self {
+            case .january: return "January"
+            case .feburary:return "Feburary"
+            case .march: return "March"
+            case .april: return "April"
+            case .may: return "May"
+            case .june: return "June"
+            case .july: return "July"
+            case .august: return "August"
+            case .september:return "September"
+            case .october: return "October"
+            case .november: return "November"
+            case .december: return "December"
+            }
+        }
+        
+        public var inittialString:Substring {
+            return self.fullString.prefix(3)
+        }
+        
         case january = 1
         case feburary
         case march

@@ -1,9 +1,9 @@
 {
   "name": "SwiftyCron",
   "version": "0.1.0",
-  "summary": "A short description of SwiftyCron.",
+  "summary": "Swift Cron Expression Library.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/patrickgao0922@gmail.com/SwiftyCron",
+  "homepage": "https://github.com/patrickgao0922/SwiftyCron",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,7 +12,7 @@
     "patrickgao0922@gmail.com": "patrickgao0922@gmail.com"
   },
   "source": {
-    "git": "https://github.com/patrickgao0922@gmail.com/SwiftyCron.git",
+    "git": "https://github.com/patrickgao0922/SwiftyCron.git",
     "tag": "0.1.0"
   },
   "platforms": {
