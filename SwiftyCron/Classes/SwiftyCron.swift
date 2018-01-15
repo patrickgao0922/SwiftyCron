@@ -40,6 +40,21 @@ public class SwiftyCron {
     }
     
     public enum Weekday:Int {
+        var fullString:String {
+            switch self {
+            case .monday: return "Monday"
+            case .tuesday:return "Tuesday"
+            case .wednesday: return "Wednesday"
+            case .thursday: return "Thursday"
+            case .friday: return "Friday"
+            case .saturday: return "Saturday"
+            case .sunday: return "Sunday"
+            }
+        }
+        
+        var inittialString:String {
+            return self.fullString.prefix(3)
+        }
         
         case monday = 1
         case tuesday
